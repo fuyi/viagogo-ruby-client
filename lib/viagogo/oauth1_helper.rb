@@ -3,7 +3,6 @@ require 'cgi'
 require 'base64'
 require 'openssl'
 require 'securerandom'
-require 'open-uri'
 
 module OAuth1
   class Helper
