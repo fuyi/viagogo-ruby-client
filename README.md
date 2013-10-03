@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a viagogo ruby client by providing consumer_key and consumer_secret
+
+    client = Viagogo::Client.new('you consumer key', 'your consumer_secret')
+
+Search for events by free text
+
+    client.search_events('free text here')
+
+## Feature
+    search events by free text
 
 ## Contributing
 
