@@ -42,8 +42,9 @@ module Viagogo
       request_url  = r.full_url
       open(request_url, 'Content-Type' => 'application/json') do |f|
           json = f.read
-          result = JSON.parse(json) if json
+          result = JSON.parse(json) if valid_json?(json)
           events = result['Results'] if result
+          events ||= []
       end
     end
     
@@ -60,7 +61,14 @@ module Viagogo
       end
     end
     
-    private :fetch_public_token
+    def valid_json?(json_)
+      JSON.parse(json_)
+      return true
+    rescue JSON::ParserError
+      return false
+    end
+    
+    private :fetch_public_token, :valid_json?
     
   end
 end
