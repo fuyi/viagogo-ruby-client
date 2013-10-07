@@ -26,8 +26,13 @@ Search for events by free text
 
     client.search_events('free text here')
 
+To get venue info
+
+    client.get_venue_by_id(venue_id)
+
 ## Feature
     search events by free text
+    get venue info
 
 ## Contributing
 
