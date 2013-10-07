@@ -4,6 +4,17 @@ require 'open-uri'
 require 'json'
 
 module Viagogo
+  
+  # set config value
+  @@conf = {}
+  def self.setup
+    yield @@conf
+  end
+  
+  def self.conf
+    @@conf
+  end
+  
   class Client
     
     AUTH_URL = 'http://api.viagogo.net/Public/SimpleOAuthAccessRequest'
@@ -11,7 +22,7 @@ module Viagogo
     
     attr_accessor :consumer_key, :consumer_secret, :token, :token_secret
 
-    def initialize(consumer_key, consumer_secret, token = nil, token_secret = nil)
+    def initialize(consumer_key = ::Viagogo.conf[:consumer_key], consumer_secret = ::Viagogo.conf[:consumer_secret], token = nil, token_secret = nil)
       @consumer_key = consumer_key
       @consumer_secret = consumer_secret
       @token = token
