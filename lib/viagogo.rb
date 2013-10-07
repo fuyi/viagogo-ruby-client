@@ -28,10 +28,6 @@ module Viagogo
       @token = token
       @token_secret = token_secret
       fetch_public_token unless token_secret # fetch public token if not supplied
-      # p @consumer_key
-      # p @consumer_secret
-      # p @token
-      # p @token_secret
     end
     
     def valid_token?
