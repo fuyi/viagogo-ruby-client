@@ -20,7 +20,7 @@ Or install it yourself as:
 
 Create a viagogo ruby client by providing consumer_key and consumer_secret
 
-    client = Viagogo::Client.new('you consumer key', 'your consumer_secret')
+    client = Viagogo::Client.new('you consumer key', 'your consumer secret')
 
 Search for events by free text
 
@@ -30,7 +30,22 @@ To get venue info
 
     client.get_venue_by_id(venue_id)
 
+
+Work with Rails3
+
+### 1) create a config file  viagogo.rb under config/initializers folder
+
+       Viagogo.setup do |config|
+            config[:consumer_key] = 'you consumer key'
+            config[:consumer_secret] = ''your consumer secret''
+       end
+
+### 2) create a viagogo client instance when needed
+
+       client = Viagogo::Client.new
+
 ## Feature
+
     search events by free text
     get venue info
 
