@@ -29,7 +29,7 @@ describe Viagogo::Client do
   it '#search_events can search for events by free text' do
     c = Viagogo::Client.new('Xfu2mHZ9wkvy3gs', 'iSsBKQzW2h4TyHkvl5jZJp0ONe3LAq')
     events = c.search_events 'Manchester United'
-    events.should be(Array)
+    events.should be_a(Array)
   end
   
   it '#search_events should throw error' do
