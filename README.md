@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fuyi/viagogo-ruby-client.png?branch=master)](https://travis-ci.org/fuyi/viagogo-ruby-client)
+
 # Viagogo
 
 This is a ruby client  library for viagogo api
