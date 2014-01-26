@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/fuyi/viagogo-ruby-client.png?branch=master)](https://travis-ci.org/fuyi/viagogo-ruby-client)
 
+[![Code Climate](https://codeclimate.com/repos/52e4e75ae30ba041b600c2ce/badges/5f80544b144931e780b9/gpa.png)](https://codeclimate.com/repos/52e4e75ae30ba041b600c2ce/feed)
+
 # Viagogo
 
 This is a ruby client  library for viagogo api
